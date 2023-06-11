@@ -9,6 +9,7 @@
       --hover-text: #64DFDF;
       --hover-background: #6930C3;
       --border-color: #80FFDB;
+      --content-gradient: #5390D9;
   }
 
 body {
@@ -22,27 +23,24 @@ body {
 
 
 .header {
-    background-image: linear-gradient(to bottom right, var(--content-background),var(--border-color));
+    background-image: linear-gradient(to bottom right, var(--content-background),var(--border-color),var(--content-background));
     font-size: 30px;
     padding: 0px 30px;
-    text-align: left;
+    text-align: center;
     color: var(--heading-color);
-    text-shadow: 2px 2px 5px var(--content-background);
+    text-shadow: 3px 3px 10px var(--content-background);
 }
 
 .topnav {
-    background-color: var(--heading-color);
+    background-image: linear-gradient(to bottom right, var(--hover-background),var(--heading-color),var(--hover-background));
     font-size: 18px;
     padding: 0px 100px;
     display: flex;
     justify-content: space-between;
 }
 
-.topnav a {
-    color: var(--heading-background);
-}
 
-.topnav h2 {
+.topnav h2, #contact-me a, #contact-me h2{
     text-shadow: 2px 2px 5px var(--hover-background);
 }
 
@@ -50,19 +48,27 @@ body {
     text-shadow: 1px 1px 2px var(--hover-background);
 }
 
+.content{
+    background-image: linear-gradient(to bottom right, var(--content-gradient),var(--content-background),var(--content-gradient));
+}
+
 .content h2 {
     padding: 20px 80px 10px 15px;
     color: var(--heading-color);
     font-size: 35px;
     width: 25%;
-    text-shadow: 1px 1px 10px var(--border-color);
+    text-shadow: 2px 2px 3px var(--heading-background);
 }
 
-.content img {
+.topnav a, #contact-me h2 {
+    color: var(--heading-background);
+}
+
+.content img, #about-me p {
     border-radius: 20px;
-    border: 2px solid var(--border-color);
-    padding: 2px;
-    box-shadow: 1px 1px 15px var(--border-color);
+    border: 2px solid var(--heading-color);
+    box-shadow: 2px 2px 15px var(--heading-color);
+    padding: 1px;
 }
 
 #about-me {
@@ -77,10 +83,9 @@ body {
     max-width: 400px;
 }
 
-
 #about-me p {
-    margin: 15px 15px 5px 20px;
-    padding: 50px 15px 20px 15px;
+    margin: 50px;
+    padding: 20px 15px 20px 5px;
     background-image: linear-gradient(to bottom right, var(--heading-background),var(--border-color),var(--heading-background));
     width: 50%;
     font-size: 26px;
@@ -88,9 +93,6 @@ body {
     color: var(--heading-color);
     text-shadow: 1px 1px 2px var(--heading-background);
     line-height: 1.4;
-    border-radius: 20px;
-    border: 2px solid var(--heading-color);
-    box-shadow: 2px 2px 15px var(--heading-color);
 }
 
 #my-work {
@@ -193,14 +195,17 @@ body {
 }
 
 #contact-me {
-    background-color: var(--heading-color);
+    background-image: linear-gradient(to bottom right, var(--hover-background),var(--heading-color),var(--hover-background));
     display: flex;
     flex-direction: row;
 }
 
-#contact-me h2 {
-    color: var(--heading-background);
-    text-shadow: 1px 1px 15px var(--content-background);
+#contact-me a:hover {
+    text-shadow: 1px 1px 2px var(--hover-background);
+}
+
+#contact-me ul li:hover {
+    text-shadow: 1px 1px 2px var(--hover-background);
 }
 
 #contact-me ul {
