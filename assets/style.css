@@ -13,23 +13,23 @@ body {
 
 .header {
     background-color: #56CFE1;
-    padding: 10px 30px 10px 30px;
+    font-size: 30px;
+    padding: 0px 30px;
+    text-align: left;
+    color: #6930C3;
+}
+
+
+.topnav {
+    background-color: #5E60CE;
+    font-size: 18px;
+    padding: 0px 100px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
-.header h1 {
-    color: #6930C3;
-    font-size: 50px;
-}
-
-.header h2 {
-    padding-top: 30px;
-}
-
-.header a {
-    color: #6930C3;
+.topnav a {
+    color: #80FFDB;
 }
 
 .content h2 {
@@ -96,7 +96,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .header, #about-me, #my-work, #contact-me, #contact-me ul {
+    #about-me, #my-work, #contact-me, #contact-me ul {
         align-items: center;
         display: flex;
         flex-direction: column;
