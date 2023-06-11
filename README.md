@@ -7,7 +7,3 @@
   <li>My Work section currently contains photos from my travels, which also link to the full photo. In the future, these will be replaced with photos of my web apps that link to the active web apps.</li>
   <li>Contact Me contains links to my phone number, email, and GitHub page.</li>
   </ul>
-  
-<img src= alt="Annika's Portfolio screenshot" title="Annika's Portfolio">
-
-![Employee data](/repository/assets/ "Employee Data title")
