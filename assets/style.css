@@ -39,7 +39,6 @@ body {
     justify-content: space-between;
 }
 
-
 .topnav h2, #contact-me a, #contact-me h2{
     text-shadow: 2px 2px 5px var(--hover-background);
 }
@@ -224,6 +223,9 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
+
+
+/*Works for both tablet & phone screen*/
 
 @media screen and (max-width: 800px) {
     .topnav, #about-me, #my-work, #contact-me, #contact-me ul {
