@@ -13,7 +13,7 @@ body {
 
 .header {
     background-color: #56CFE1;
-    padding: 30px;
+    padding: 10px 30px 10px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -24,49 +24,90 @@ body {
     font-size: 50px;
 }
 
-.header a{
+.header h2 {
+    padding-top: 30px;
+}
+
+.header a {
     color: #6930C3;
 }
 
-h2 {
-    padding-top: 20px;
+.content h2 {
+    padding: 20px 80px 10px 15px;
     color:#5E60CE;
     font-size: 30px;
+    width: 20%;
 }
 
-.content {
-    padding: 10px;
+#about-me {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.content p {
-    font-size: 25px;
-    line-height: 1.4;
-    color: #6930C3;
-    padding: 20px;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column; 
+#about-me img {
+    width: 20%;
+    padding-top: 45px;
 }
 
-#about-me{
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-around; 
+#about-me p {
+    padding: 20px 15px 5px 20px;
+    width: 60%;
+    font-size: 22px;
+    color: #7400B8;
+    line-height: 1.3;
 }
- 
-#my-work{
+
+#my-work {
+    padding-top: 20px;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#my-work img {
+    padding: 45px 10px 0px 0px;
+    width: 20%;
+    display: flex;
     justify-content: space-between;
 }
 
-#my-work img, #about-me img {
-    max-width: 20%;
-    padding: 50px 20px 20px 20px;
+#contact-me {
+    display: flex;
+    flex-direction: row;
 }
 
-@media screen and (max-width: 768px){
-    .header {
+#contact-me ul {
+    list-style-type: none;
+    width: 90%;
+    padding-top: 35px;
+    display: flex;
+    flex-direction: row;
+}
+
+#contact-me ul li, #contact-me a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #80FFDB;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 600px) {
+    .header, #about-me, #my-work, #contact-me, #contact-me ul {
+        align-items: center;
+        display: flex;
         flex-direction: column;
+    }
+    .content h2, #about-me img, #my-work img, #contact-me a {
+        width: 100%;
+        padding: 15px;
+    }
+    #about-me, #about-me p, #my-work, #contact-me, #contact-me ul {
+        text-align: center;
+        padding: 15px;
+        width: 100%;
     }
 }
