@@ -75,7 +75,6 @@ body {
 }
 
 .big-pic {
-    width: 25%;
     padding: 45px 5px 5px 5px;
     position: relative;
     width: 50%;
@@ -102,15 +101,15 @@ body {
     -ms-transform: translate(-50%, -50%)
   }
 
-  .big-pic:hover img {
+.big-pic:hover img {
     opacity: 0.3;
   }
 
-  .big-pic:hover .big-pic-button {
+.big-pic:hover .big-pic-button {
     opacity: 1;
   }
   
-  .big-pic-button {
+.big-pic-button {
     background-color: var(--hover-background);
     color: var(--hover-text);
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -119,18 +118,42 @@ body {
   }
 
 .small-pic {
-    width: 50%;
     padding: 45px 5px 5px 5px;
     display: flex;
     align-items: center; 
     flex-direction: column;
+    position: relative;
+    width: 50%;
 }
 
 .small-pic img {
     max-height: 180px;
     padding: 10px;
-    display: flex;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
+
+.sm-button-1 {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.small-pic:hover .cape-cod {
+    opacity: 0.3;
+  }
+
+.small-pic:hover .sm-button-1 {
+    opacity: 1;
+  }
 
 #contact-me {
     display: flex;
@@ -160,7 +183,7 @@ body {
         align-items: center;
         flex-direction: column;
     }
-
+    
     .content h2, #about-me img, .big-pic, .small-pic, #contact-me a {
         width: 100%;
         padding: 15px;
@@ -171,7 +194,6 @@ body {
         width: 100%;
         padding: 15px;
     }
-    
     .big-pic img {
         width: 100%;
         display: flex;
