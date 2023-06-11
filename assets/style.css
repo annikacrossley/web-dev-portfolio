@@ -6,6 +6,8 @@
       --heading-color: #5E60CE;
       --content-background: #4EA8DE;
       --heading-background: #56CFE1;
+      --hover-text: #64DFDF;
+      --hover-background: #6930C3;
   }
 
 body {
@@ -54,6 +56,7 @@ body {
 
 #about-me img {
     width: 25%;
+    max-width: 400px;
     padding-top: 45px;
 }
 
@@ -74,12 +77,46 @@ body {
 .big-pic {
     width: 25%;
     padding: 45px 5px 5px 5px;
+    position: relative;
+    width: 50%;
 }
 
 .big-pic img {
     max-height: 540px;
     padding: 10px;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
+
+.big-pic-button {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+
+  .big-pic:hover img {
+    opacity: 0.3;
+  }
+
+  .big-pic:hover .big-pic-button {
+    opacity: 1;
+  }
+  
+  .big-pic-button {
+    background-color: var(--hover-background);
+    color: var(--hover-text);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding: 16px 32px;
+  }
 
 .small-pic {
     width: 50%;
@@ -94,20 +131,6 @@ body {
     padding: 10px;
     display: flex;
 }
-
-/*
-#my-work h2 {
-    padding-right: 220px;
-}
-
-#my-work a, #my-work img {
-    width: 75%;
-    padding: 20px 0px 0px 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-*/
 
 #contact-me {
     display: flex;
@@ -131,19 +154,27 @@ body {
     justify-content: space-evenly;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .topnav, #about-me, #my-work, #contact-me, #contact-me ul {
-        align-items: center;
         display: flex;
+        align-items: center;
         flex-direction: column;
     }
-    .content h2, #about-me img, #my-work img, #contact-me a {
+
+    .content h2, #about-me img, .big-pic, .small-pic, #contact-me a {
         width: 100%;
         padding: 15px;
     }
+
     .header, #about-me, #about-me p, #my-work, #contact-me, #contact-me ul {
         text-align: center;
-        padding: 15px;
         width: 100%;
+        padding: 15px;
+    }
+    
+    .big-pic img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 }
