@@ -249,4 +249,8 @@ body {
         display: flex;
         justify-content: center;
     }
+    .cape-cod, .lake-louise, .purple-flower {
+        width: 100%;
+        padding: 15px;
+    }
 }
